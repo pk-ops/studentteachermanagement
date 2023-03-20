@@ -1,0 +1,10 @@
+.teacher_btn{
+    
+    border: 0.5px;
+    float: right;
+    border-radius: 10px;
+    padding: 5px;
+   }
+/* .teacher_btn:hover{
+    transform: scale(.9);
+} */
