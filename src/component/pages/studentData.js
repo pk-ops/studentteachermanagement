@@ -72,8 +72,8 @@ const StudentsData = () => {
                                 <td>
                                     <Link className='btn btn-primary p-2 mx-2' to={`/stud/${stud._id}`}><i className='fa fa-eye' aria-hidden='true'></i></Link>
 
-                                    <Link className='btn btn-outline-primary p-2 mx-2' to={`/stud/edit/${stud._id}`}><EditIcon/></Link>
-                                    <Link className="btn btn-danger p-2" onClick={()=>deleteStudent(stud._id)}><DeleteIcon/></Link>
+                                    <Link className='btn btn-outline-primary ' to={`/stud/edit/${stud._id}`}><EditIcon/></Link>
+                                    <Link className="btn btn-danger" onClick={()=>deleteStudent(stud._id)}><DeleteIcon/></Link>
                                 </td>
                             </tr>
                        ))}
