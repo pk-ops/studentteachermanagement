@@ -2,6 +2,7 @@
 import { useNavigate } from "react-router-dom"
 import { React, useContext, useState } from "react";
 import CommonContext from "../../context/commonContext";
+import { API } from "../../global";
 
 
 
@@ -43,7 +44,7 @@ const Addstudent = () => {
        if(!isLoggedIn){
             navigate("/LoginDetail")
        }else{
-        fetch("http://localhost:9000/student/",{
+        fetch(`${API}/student/`,{
             method:"POST",
             crossDomain:true,
             headers:{"Content-Type":"application/json",

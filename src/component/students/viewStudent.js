@@ -1,6 +1,7 @@
 import axios from "axios";
 import {Link,useParams} from "react-router-dom"
 import {React,useEffect,useState} from "react";
+import { API } from "../../global";
 
 
 
@@ -21,7 +22,7 @@ const ViewStudent =()=> {
     },[]);
 
     const loadUser = async() =>{
-        const result=await axios.get(`http://localhost:9000/student/${id}`)
+        const result=await axios.get(`${API}/student/${id}`)
         setStudent(result.data);
         console.log(result)
     }

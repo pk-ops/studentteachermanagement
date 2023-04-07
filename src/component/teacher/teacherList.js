@@ -4,6 +4,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import CommonContext from '../../context/commonContext';
 import './teacher.css'
+import { API } from '../../global';
 function TeacherList(props) {
     const navigate=useNavigate();
 
@@ -15,7 +16,7 @@ function TeacherList(props) {
         // if(!isLoggedIn){
         //     navigate("/LoginDetail")
         // }else{
-            fetch("http://localhost:9000/teachers/",{
+            fetch(`${API}/teachers/`,{
                 headers:{"x-auth-token":localStorage.getItem("x-auth-token")}
             })
             .then((data)=>data.json())

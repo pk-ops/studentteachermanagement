@@ -6,6 +6,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import CommonContext from "../../context/commonContext";
+import { API } from "../../global";
 // import Search from "@mui/icons-material/Search";
 
 const StudentsData = () => {
@@ -13,7 +14,7 @@ const StudentsData = () => {
     const{isLoggedIn}=useContext(CommonContext)
     const navigate=useNavigate()
     const deleteStudent=(id)=>{
-        fetch(`http://localhost:9000/student/${id}`,{
+        fetch(`${API}/student/${id}`,{
                 method:'DELETE'
               }).then(()=>getStudent())
         };
@@ -22,7 +23,7 @@ const StudentsData = () => {
         if(!isLoggedIn){
             navigate("/LoginDetail")
         }else{
-            fetch("http://localhost:9000/student",{
+            fetch(`${API}/student`,{
                 headers:{"x-auth-token":localStorage.getItem('x-auth-token')}
             })
             .then((data)=>data.json())

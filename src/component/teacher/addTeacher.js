@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import CommonContext from '../../context/commonContext';
+import { API } from '../../global';
 
 function AddTeacher(props) {
     const navigate=useNavigate();
@@ -34,7 +35,7 @@ function AddTeacher(props) {
             phoneno:teacher.phoneno,
 
         }
-        fetch("http://localhost:9000/teachers/",{
+        fetch(`${API}/teachers/`,{
             method:"POST",
             crossDomain:true,
             headers:{"Content-Type":"application/json",

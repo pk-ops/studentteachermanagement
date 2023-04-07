@@ -17,6 +17,7 @@ import { useState,useContext } from 'react';
 import signuppage from "../Poster/signuppage.jpg"
 import { useNavigate } from 'react-router-dom';
 import CommonContext from '../context/commonContext';
+import { API } from '../global';
 // src/Poster/signuppage.jpg
 function Copyright(props) {
   return (
@@ -57,7 +58,7 @@ const handleInput=(e)=>{
           password:registerInput.password
       }
 
-      fetch(`http://localhost:9000/registration/login`,{
+      fetch(`${API}/registration/login`,{
           method:"POST",
           crossDomain:true,
 

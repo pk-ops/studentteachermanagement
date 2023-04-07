@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom"
 import { React, useEffect, useState } from "react";
+import { API } from "../../global";
 
 
 
@@ -8,7 +9,7 @@ const EditStudent = () => {
     const { id } = useParams();
     const [student, setStudents] = useState(null);
     const getStudent = () => {
-        fetch(`http://localhost:9000/student/${id}`)
+        fetch(`${API}/student/${id}`)
             .then((data) => data.json())
             .then((mvs) => setStudents(mvs));
     };
@@ -46,7 +47,7 @@ function EditStudentForm({ student }) {
             registrationcode: registrationcode,
             phoneno: phoneno
         }
-        fetch(`http://localhost:9000/student/${student._id}`, {
+        fetch(`${API}/student/${student._id}`, {
             method: "PUT",
             crossDomain: true,
             headers: {
