@@ -40,7 +40,7 @@ export default function Login() {
 
   const {isLoggedIn, SetIsLoggedIn } = useContext(CommonContext);
   const initialValues={
-    email:"user",
+    email:"user@gmail.com",
     password:"user@123"
   }
 
