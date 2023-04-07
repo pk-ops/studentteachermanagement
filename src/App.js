@@ -76,7 +76,7 @@ function App() {
       <Route  path="/studentAdd" element={<Addstudent/>}/>
       <Route  path="/stud/edit/:id" element={<EditStudent/>}/>
       <Route  path="/stud/:id" element={<ViewStudent/>}/>
-      <Route  path="*" element={<PagesNotFound/>}/>
+      {/* <Route  path="*" element={<PagesNotFound/>}/> */}
 
       <Route  path="/login" element={<Login/>}/>
       <Route path="/LoginDetail" element={<PopupPage/>}/>
