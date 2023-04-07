@@ -14,7 +14,8 @@ const ViewStudent =()=> {
         firstname:"",
         surname:"",
         standard:"",
-        phoneno:""
+        phoneno:"",
+        registrationcode:""
     });
 
     useEffect(() => { 
@@ -30,7 +31,7 @@ const ViewStudent =()=> {
     return (
         <div className="container py-4">
             
-            <h1 className="display-4">Student Serial No: {id}</h1>
+            <h1 className="display-4">Student Serial No: {student.registrationcode }</h1>
             <hr/>
             <ul className="list-group w-50">
                <li className="list-group-item">firstname: {student.firstname}</li>  

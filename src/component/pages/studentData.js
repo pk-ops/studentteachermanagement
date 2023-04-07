@@ -23,7 +23,7 @@ const StudentsData = () => {
         if(!isLoggedIn){
             navigate("/LoginDetail")
         }else{
-            fetch(`${API}/student`,{
+            fetch(`${API}/student/`,{
                 headers:{"x-auth-token":localStorage.getItem('x-auth-token')}
             })
             .then((data)=>data.json())
